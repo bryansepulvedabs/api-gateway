@@ -21,6 +21,11 @@ spring:
               predicates:
                 - Path=/api/users/**
 
+            - id: user-service-auth
+              uri: http://user-service:8092
+              predicates:
+                - Path=/api/auth/**
+
             - id: rental-service
               uri: http://rental-service:8093
               predicates:
